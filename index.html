@@ -6,22 +6,36 @@
   <title>Date, Time and Day | PHP</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Patrick+Hand&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Homemade+Apple&family=Special+Elite&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main class="stage" aria-live="polite">
-    <h1>Right now</h1>
-    <p class="day" id="day">Loading...</p>
-    <p class="clock"><span id="time">--:--:--</span> <span class="ampm" id="meridiem">--</span></p>
-    <p class="date" id="date">Fetching date from PHP</p>
-    <p class="small">Server timezone: <span id="zone">--</span></p>
-    <p class="small"><a href="age.html">Go to the age check</a></p>
+  <main class="board">
+    <div class="clip" aria-hidden="true"></div>
+    <span class="star s1" aria-hidden="true">&#9733;</span>
+    <span class="star s2" aria-hidden="true">&#9733;</span>
+
+    <section class="card" aria-live="polite">
+      <h1>Right now</h1>
+      <p class="script" id="day">Loading...</p>
+
+      <div class="time">
+        <span id="time">--:--:--</span>
+        <span id="meridiem">--</span>
+      </div>
+
+      <p class="date" id="date">Fetching date from PHP</p>
+
+      <div class="barcode" aria-hidden="true"></div>
+      <p class="zone">Server timezone: <span id="zone">--</span></p>
+    </section>
+
     <p class="note" id="error" hidden>
       Could not reach api/datetime.php. Run this folder with a PHP server:
       <code>php -S localhost:8000</code>
     </p>
   </main>
+
   <script src="script.js"></script>
 </body>
 </html>
