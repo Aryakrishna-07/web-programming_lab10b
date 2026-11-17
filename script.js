@@ -3,7 +3,7 @@ const el = id => document.getElementById(id);
 
 async function updateClock() {
   try {
-    const res = await fetch('datetime.php', { cache: 'no-store' });
+    const res = await fetch('api/datetime.php', { cache: 'no-store' });
     if (!res.ok) throw new Error('Bad response');
     const d = await res.json();
 
